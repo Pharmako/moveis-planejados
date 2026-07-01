@@ -119,7 +119,7 @@ export default function App() {
           
           {/* CTA WhatsApp Button */}
           <a 
-            href="https://wa.me/5531999999999" 
+            href="https://wa.me/5531984005673" 
             target="_blank" 
             rel="noreferrer" 
             className="btn-primary-sage-pill px-5 py-2.5 rounded-full font-sans-outfit font-bold text-[10px] md:text-xs uppercase tracking-wider flex items-center gap-1.5"
@@ -152,7 +152,7 @@ export default function App() {
 
           <div ref={heroCtaRef} className="flex flex-col sm:flex-row gap-4 items-center">
             <a 
-              href="https://wa.me/5531999999999" 
+              href="https://wa.me/5531984005673" 
               target="_blank" 
               rel="noreferrer" 
               className="btn-primary-sage-pill px-8 py-4 rounded-full font-sans-outfit font-bold text-sm uppercase tracking-widest flex items-center gap-3 shadow-md"
@@ -262,7 +262,7 @@ export default function App() {
 
             <div className="pt-4 border-t border-sand/60 flex flex-col gap-4">
               <a 
-                href="https://wa.me/5531999999999" 
+                href="https://wa.me/5531984005673" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="w-full py-3 bg-[#25D366] hover:bg-[#20ba56] text-white rounded-2xl font-sans-outfit font-bold text-xs uppercase tracking-widest flex items-center justify-center gap-2 shadow-sm transition-all duration-300 hover:scale-[1.02] active:scale-95"
@@ -431,7 +431,7 @@ export default function App() {
 
           <div className="flex flex-col items-center gap-4">
             <a 
-              href="https://wa.me/5531999999999" 
+              href="https://wa.me/5531984005673" 
               target="_blank" 
               rel="noreferrer" 
               className="btn-primary-sage-rounded px-10 py-4.5 font-sans-outfit font-bold text-sm uppercase tracking-widest flex items-center gap-2.5 shadow-md shadow-primary-sage/10"
