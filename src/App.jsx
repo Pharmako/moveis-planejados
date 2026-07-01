@@ -60,18 +60,7 @@ export default function App() {
         { y: 0, opacity: 1, duration: 1, delay: 0.3, ease: "power2.out" }
       );
 
-      // 2. Standard staggered fade-in for Features Cards
-      gsap.from(".luxury-card", {
-        scrollTrigger: {
-          trigger: "#padrao",
-          start: "top 95%",
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.18,
-        ease: "power2.out"
-      });
+
 
       // 3. Process Steps & Grid Animation
       gsap.from(".process-timeline-step", {
@@ -410,15 +399,15 @@ export default function App() {
           {/* Card 4 */}
           <div className="vitrine-card relative group overflow-hidden rounded-3xl aspect-[4/3] bg-sand border border-sand shadow-sm">
             <img 
-              src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=80" 
-              alt="Closet Integrado Dione" 
+              src="/gallery-4.jpg" 
+              alt="Closet Planejado Branco Dione" 
               className="w-full h-full object-cover filter brightness-95 saturate-[0.8] group-hover:scale-105 group-hover:brightness-100 transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
               <span className="text-[9px] font-sans-outfit text-primary-gold uppercase tracking-widest font-bold mb-2">Closet</span>
-              <h4 className="text-lg md:text-xl font-serif-heading font-semibold text-white">Closet Integrado Glass</h4>
+              <h4 className="text-lg md:text-xl font-serif-heading font-semibold text-white">Closet Planejado Branco</h4>
               <p className="text-xs text-white/70 font-sans-jakarta mt-1.5 font-light leading-relaxed max-w-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                Mobiliário planejado com portas em vidro reflecta cinza bronze, iluminação interna em LED sutil e ferragens italianas.
+                Mobiliário planejado com divisórias inteligentes, gaveteiros integrados e acabamento minimalista em laca branca.
               </p>
             </div>
           </div>
@@ -437,7 +426,7 @@ export default function App() {
             Vamos tirar o seu projeto do papel?
           </h2>
           <p className="text-xs md:text-sm text-chumbo-light font-sans-jakarta max-w-xl mx-auto leading-relaxed mb-10 font-light">
-            Mande uma mensagem agora e conte pra gente o que você está imaginando para a sua casa. O orçamento é sem compromisso.
+            Mande uma mensagem agora e conte pra gente o que você está imaginando para a sua casa. Dê o primeiro passo para seu sonho.
           </p>
 
           <div className="flex flex-col items-center gap-4">
