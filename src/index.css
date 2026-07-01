@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-gold: #A18A68;
+  --color-primary-sage: #8C9D86;
+  --color-primary-sage-hover: #7A8B74;
+  --color-off-white: #FAF8F5;
+  --color-sand: #F3EDE4;
+  --color-fendi: #E5DDD0;
+  --color-chumbo: #2D2E2F;
+  --color-chumbo-light: #525457;
+  --color-whatsapp: #25D366;
+
+  --font-serif-logo: "Cinzel", serif;
+  --font-serif-heading: "Playfair Display", serif;
+  --font-sans-outfit: "Outfit", sans-serif;
+  --font-sans-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-mono-telemetry: "Fira Code", monospace;
+}
+
+/* CSS noise overlay for subtle organic texture */
+.noise-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  opacity: 0.018;
+  z-index: 9999;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+/* Light glassmorphic navigation bar on scroll */
+.glass-nav-light {
+  background-color: rgba(250, 248, 245, 0.85);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(161, 138, 104, 0.15);
+}
+
+/* Architecture studio card design */
+.card-light {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(161, 138, 104, 0.08);
+  box-shadow: 0 10px 30px -10px rgba(161, 138, 104, 0.05), 0 1px 3px rgba(0, 0, 0, 0.01);
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+::-webkit-scrollbar-thumb {
+  background: #E5DDD0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #8C9D86;
+}
+
+/* Solid transition primary button (pill shape) */
+.btn-primary-sage-pill {
+  background-color: #8C9D86;
+  color: #FAF8F5;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, background-color 0.4s ease;
+}
+.btn-primary-sage-pill:hover {
+  background-color: #A18A68; /* Hover color Aged Gold */
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px -5px rgba(140, 157, 134, 0.35);
+}
+
+/* Solid transition primary button (regular 24px) */
+.btn-primary-sage-rounded {
+  background-color: #8C9D86;
+  color: #FAF8F5;
+  border-radius: 24px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease, background-color 0.4s ease;
+}
+.btn-primary-sage-rounded:hover {
+  background-color: #A18A68; /* Hover color Aged Gold */
+  transform: scale(1.03);
+  box-shadow: 0 10px 25px -5px rgba(140, 157, 134, 0.35);
+}
+
+/* Outline transition gold button (pill shape) */
+.btn-outline-gold-pill {
+  border: 1px solid rgba(250, 248, 245, 0.6);
+  color: #FAF8F5;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), color 0.4s ease, border-color 0.4s ease;
+}
+.btn-outline-gold-pill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(250, 248, 245, 0.15);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  z-index: -1;
+}
+.btn-outline-gold-pill:hover {
+  border-color: #FAF8F5;
+  transform: scale(1.03);
+}
+.btn-outline-gold-pill:hover::before {
+  transform: scaleY(1);
+  transform-origin: top;
+}
+
+/* Simple smooth line wave animation for features card */
+.feature-wave-path {
+  stroke-dasharray: 400;
+  stroke-dashoffset: 400;
+  animation: draw-wave 4s ease-in-out infinite;
+}
+
+@keyframes draw-wave {
+  0% {
+    stroke-dashoffset: 400;
+  }
+  50% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -400;
+  }
+}
