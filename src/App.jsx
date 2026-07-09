@@ -105,9 +105,16 @@ export default function App() {
             : "bg-transparent border border-transparent"
         }`}>
           {/* Logo */}
-          <div className="flex flex-col items-start leading-none select-none">
-            <span className={`font-serif-logo text-lg md:text-xl tracking-[0.25em] font-semibold transition-colors duration-500 ${isScrolled ? "text-chumbo" : "text-white"}`}>DIONE</span>
-            <span className={`font-sans-jakarta text-[8px] uppercase tracking-[0.22em] italic mt-0.5 font-medium transition-colors duration-500 ${isScrolled ? "text-primary-gold" : "text-white/80"}`}>Móveis Planejados</span>
+          <div className={`transition-colors duration-500 ${isScrolled ? "text-chumbo" : "text-white"}`}>
+            <svg width="148" height="34" viewBox="0 0 148 34" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 md:h-9 w-auto">
+              {/* Capsule */}
+              <rect x="2" y="3" width="144" height="28" rx="8" stroke="currentColor" strokeWidth="2" fill="none"/>
+              {/* Monogram MP */}
+              <path d="M 11,24 L 14,9 L 20,18 L 26,9 C 28,15 28,20 28,24 M 26,9 C 31,4 39,5 39,13 C 39,21 29,21 27,17" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* "Mavich Planejados" Text */}
+              <text x="44" y="16" fontFamily="'Outfit', sans-serif" fontWeight="700" fontSize="12" fill="currentColor" letterSpacing="0.03em">Mavich</text>
+              <text x="44" y="25" fontFamily="'Plus Jakarta Sans', sans-serif" fontWeight="600" fontSize="8" fill="currentColor" letterSpacing="0.03em">Planejados</text>
+            </svg>
           </div>
           
           {/* Navigation Links */}
@@ -131,7 +138,7 @@ export default function App() {
       </header>
 
       {/* HERO SECTION */}
-      <section className="relative h-screen w-full flex items-center justify-center bg-[linear-gradient(to_bottom,rgba(45,46,47,0.45),rgba(45,46,47,0.45)),url('/hero.jpg')] bg-cover bg-center">
+      <section className="relative h-screen w-full flex items-center justify-center bg-[linear-gradient(to_bottom,rgba(45,46,47,0.45),rgba(45,46,47,0.45)),url('/hero-custom.jpg')] bg-cover bg-center">
         <div className="max-w-4xl mx-auto px-6 text-center z-10 flex flex-col items-center">
 
           <h1 
@@ -351,8 +358,8 @@ export default function App() {
           {/* Card 1 */}
           <div className="vitrine-card relative group overflow-hidden rounded-3xl aspect-[4/3] bg-sand border border-sand shadow-sm">
             <img 
-              src="/gallery-1.png" 
-              alt="Cozinha Planejada Grafite Dione" 
+              src="/gallery-1-grafite.jpg" 
+              alt="Cozinha Planejada Grafite Mavich" 
               className="w-full h-full object-cover filter brightness-95 saturate-[0.8] group-hover:scale-105 group-hover:brightness-100 transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
@@ -367,8 +374,8 @@ export default function App() {
           {/* Card 2 */}
           <div className="vitrine-card relative group overflow-hidden rounded-3xl aspect-[4/3] bg-sand border border-sand shadow-sm">
             <img 
-              src="/gallery-2.png" 
-              alt="Cozinha Planejada Classic Blue Dione" 
+              src="/gallery-classic-blue.png" 
+              alt="Cozinha Planejada Classic Blue Mavich" 
               className="w-full h-full object-cover filter brightness-95 saturate-[0.8] group-hover:scale-105 group-hover:brightness-100 transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
@@ -383,15 +390,15 @@ export default function App() {
           {/* Card 3 */}
           <div className="vitrine-card relative group overflow-hidden rounded-3xl aspect-[4/3] bg-sand border border-sand shadow-sm">
             <img 
-              src="/gallery-3.jpg" 
-              alt="Gaveteiro Otimizado sob Escada Dione" 
+              src="/gallery-3-quarto.jpg" 
+              alt="Quarto Planejado Bege e Carvalho Mavich" 
               className="w-full h-full object-cover filter brightness-95 saturate-[0.8] group-hover:scale-105 group-hover:brightness-100 transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
-              <span className="text-[9px] font-sans-outfit text-primary-gold uppercase tracking-widest font-bold mb-2">Soluções Inteligentes</span>
-              <h4 className="text-lg md:text-xl font-serif-heading font-semibold text-white">Armário Otimizado sob Escada</h4>
+              <span className="text-[9px] font-sans-outfit text-primary-gold uppercase tracking-widest font-bold mb-2">Quarto</span>
+              <h4 className="text-lg md:text-xl font-serif-heading font-semibold text-white">Quarto Planejado Bege e Carvalho</h4>
               <p className="text-xs text-white/70 font-sans-jakarta mt-1.5 font-light leading-relaxed max-w-sm opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">
-                Gaveteiros ergonômicos sob medida integrados à escada, otimizando o espaço residencial com sofisticação.
+                Mobiliário planejado com ponte de armários superiores, nichos de cabeceira em madeira clara e cabeceira em ripas de carvalho, tudo com acabamento minimalista em laca bege fosca.
               </p>
             </div>
           </div>
@@ -399,8 +406,8 @@ export default function App() {
           {/* Card 4 */}
           <div className="vitrine-card relative group overflow-hidden rounded-3xl aspect-[4/3] bg-sand border border-sand shadow-sm">
             <img 
-              src="/gallery-4.jpg" 
-              alt="Closet Planejado Branco Dione" 
+              src="/gallery-4-closet.jpg" 
+              alt="Closet Planejado Branco Mavich" 
               className="w-full h-full object-cover filter brightness-95 saturate-[0.8] group-hover:scale-105 group-hover:brightness-100 transition-all duration-700 ease-out"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-end p-8">
@@ -450,14 +457,21 @@ export default function App() {
       <footer className="bg-off-white border-t border-sand py-12 px-6 relative z-30">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           {/* Logo */}
-          <div className="flex flex-col items-center md:items-start leading-none select-none">
-            <span className="font-serif-logo text-lg tracking-[0.25em] font-semibold text-chumbo/70">DIONE</span>
-            <span className="font-sans-jakarta text-[8px] uppercase tracking-[0.22em] italic text-primary-gold mt-0.5 font-semibold">Móveis Planejados</span>
+          <div className="text-chumbo/70">
+            <svg width="148" height="34" viewBox="0 0 148 34" fill="none" xmlns="http://www.w3.org/2000/svg" className="h-8 md:h-9 w-auto mx-auto md:mx-0">
+              {/* Capsule */}
+              <rect x="2" y="3" width="144" height="28" rx="8" stroke="currentColor" strokeWidth="2" fill="none"/>
+              {/* Monogram MP */}
+              <path d="M 11,24 L 14,9 L 20,18 L 26,9 C 28,15 28,20 28,24 M 26,9 C 31,4 39,5 39,13 C 39,21 29,21 27,17" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round"/>
+              {/* "Mavich Planejados" Text */}
+              <text x="44" y="16" fontFamily="'Outfit', sans-serif" fontWeight="700" fontSize="12" fill="currentColor" letterSpacing="0.03em">Mavich</text>
+              <text x="44" y="25" fontFamily="'Plus Jakarta Sans', sans-serif" fontWeight="600" fontSize="8" fill="currentColor" letterSpacing="0.03em">Planejados</text>
+            </svg>
           </div>
 
           {/* Copyright details */}
           <p className="text-[10px] md:text-xs text-chumbo-light/50 font-sans-jakarta text-center md:text-left">
-            &copy; 2026 Dione Móveis Planejados. Todos os direitos reservados. Desenvolvido por Pharmako Web.
+            &copy; 2026 Mavich Móveis Planejados. Todos os direitos reservados. Desenvolvido por Pharmako Web.
           </p>
 
           {/* Minimal Green Dot Status */}
